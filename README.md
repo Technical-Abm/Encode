@@ -18,5 +18,5 @@ pip install base64 && pip install base64encode
 ```
 # run main file
 ```
-python Reinstall.py
+python encode.py
 ```
