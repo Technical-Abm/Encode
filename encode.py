@@ -14,7 +14,7 @@ from sys import stdout, exit
 import multiprocessing
 import sys
 from json import dumps
-from faker import fork
+from faker import Faker
 
 try:
     import pip
@@ -33,8 +33,8 @@ now = datetime.now()
 b = requests.get('https://api.ipify.org').text.strip()
 ips = requests.get('https://ipapi.com/ip_api.php?ip=' + b, headers={'Referer': 'https://ip-api.com/', 'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'}).json()['country_name'].lower()
 hostname = sock.gethostname()
-faker = fork()
-ip_u = fork.ipv4()
+faker = Faker()
+ip_u = faker.ipv4()
 
 AUTHOR = "Technical Abm"
 GITHUB = "https://github.com/Technical-Abm"
