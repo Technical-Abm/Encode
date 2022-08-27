@@ -26,14 +26,6 @@ try:
 except(NameError,IOError,OSError):
     exit(f" Modules not installed, Please try again")
 
-try:
-    if "Windows" in platform.system():
-        os.system("cls")
-    else:
-        os.system("clear")
-except(NameError,KeyError):
-    exit()
-
 from datetime import datetime
 now = datetime.now()
 
@@ -68,7 +60,7 @@ def thumbnail():
 
 class base64encode_decoode(object):
     def __init__(self) -> None:
-        os.system("cls")
+        os.system("clear")
         thumbnail()
         print()
         print(" [1] Encode MD5 Text")
@@ -80,7 +72,7 @@ class base64encode_decoode(object):
         print()
         self.user = input(" Choose an option :- ")
         if "1" in self.user:
-            os.system("cls")
+            os.system("clear")
             thumbnail()
             print()
             self.text = input(" Enter your text or file :- ")
@@ -92,7 +84,7 @@ class base64encode_decoode(object):
             time.sleep(3)
             ask_user()
         elif "2" in self.user:
-            os.system("cls")
+            os.system("clear")
             thumbnail()
             print()
             self.ua = input(" Enter text or file name :- ")
@@ -106,7 +98,7 @@ class base64encode_decoode(object):
         elif "3" in self.user:
             __hexcode__()
         elif "4" in self.user:
-            os.system("cls")
+            os.system("clear")
             thumbnail()
             print()
             self.user = input(" Enter file name or text :- ")
@@ -123,7 +115,7 @@ class base64encode_decoode(object):
 
 class __hexcode__(object):
     def __init__(self) -> None:
-        os.system("cls")
+        os.system("clear")
         thumbnail()
         print()
         self.str = input(" Enter file name or any text :- ")
@@ -137,13 +129,13 @@ class __hexcode__(object):
 if __name__ == '__main__':
     class ask_user(object):
         def __init__(self) -> None:
-            os.system("cls")
+            os.system("clear")
             thumbnail()
             print()
             try:
                 self.ask = input(" DO you want to save encode file :- ")
                 if "yes" or "Yes" in self.ask:
-                    os.system("cls")
+                    os.system("clear")
                     thumbnail()
                     print()
                     self.encodes = input(" Enter your encode here :- ")
