@@ -14,7 +14,7 @@ cd Encode
 ```
 pip install requests
 pip install bs4
-pip install base64 && pip install base64encode
+pip install faker
 ```
 # run main file
 ```
