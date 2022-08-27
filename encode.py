@@ -14,6 +14,7 @@ from sys import stdout, exit
 import multiprocessing
 import sys
 from json import dumps
+from faker import fork
 
 try:
     import pip
@@ -21,7 +22,7 @@ except(NameError,KeyError,IOError):
     os.system("python -m pip install -U --force-reinstall pip")
 
 try:
-    packages = ["bs4","requests","ipaddress","ipinfo","fake-agent"]
+    packages = ["bs4","requests","ipaddress","ipinfo","faker"]
     pip.main(['install'] + packages + ['--upgrade'])
 except(NameError,IOError,OSError):
     exit(f" Modules not installed, Please try again")
@@ -32,7 +33,8 @@ now = datetime.now()
 b = requests.get('https://api.ipify.org').text.strip()
 ips = requests.get('https://ipapi.com/ip_api.php?ip=' + b, headers={'Referer': 'https://ip-api.com/', 'Content-Type': 'application/json; charset=utf-8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]'}).json()['country_name'].lower()
 hostname = sock.gethostname()
-ipx = sock.gethostbyname(hostname)
+faker = fork()
+ip_u = fork.ipv4()
 
 AUTHOR = "Technical Abm"
 GITHUB = "https://github.com/Technical-Abm"
@@ -54,7 +56,7 @@ def thumbnail():
     t12 = "---------------------------------------------------"
     t13 = f" Arch : {platform.uname()[4]}                    Tme : {now.strftime('%H:%M:%S')}    "
     t14 = f" Date : {now.strftime('%Y/%m/%d')}                 Rel : {ips}"
-    t15 = f" Host : {hostname} \t           Ips : {ipx}"
+    t15 = f" Host : {hostname} \t           Ips : {ip_u}"
     t16 = "---------------------------------------------------"
     print("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s"%(t01,t02,t03,t04,t05,t06,t07,t08,t09,t10,t11,t12,t13,t14,t15,t16))
 
