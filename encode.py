@@ -9,11 +9,11 @@ class USERPLATFORMCONNECT(object):
             if "3.10.6" in platform.python_version():
                 try:
                     if "64" in platform.machine() and "32" not in platform.machine():
-                        print("This device is 64bit")
-                        time.sleep(3)
+                        import encode as enc
+                        enc.base64encode_decoode()
                     elif "32" in platform.machine() and "64" not in platform.machine():
-                        print("This is 32bit device")
-                        time.sleep(3)
+                        import encodex as enc
+                        enc.base64encode_decoode()
                 except(ValueError,KeyError):
                     print(" invalid platform device or not supported ")
                     pass
