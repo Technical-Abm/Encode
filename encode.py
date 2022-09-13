@@ -1,6 +1,7 @@
 import os
 import platform
 import time
+from pystyle import Center
 
 class USERPLATFORMCONNECT(object):
     def __init__(self) -> None:
@@ -15,12 +16,12 @@ class USERPLATFORMCONNECT(object):
                         import encodex as enc
                         enc.base64encode_decoode()
                 except(ValueError,KeyError):
-                    print(" invalid platform device or not supported ")
+                    print(Center.XCenter("invalid platform device or not supported "))
                     pass
                 pass
         except(platform.errno,KeyError,AttributeError):
             print()
-            print("Your python is tool old version")
+            print(Center.XCenter("Your python is tool old version"))
             pass
         pass
 USERPLATFORMCONNECT()
