@@ -15,6 +15,7 @@ cd Encode
 pip install requests
 pip install bs4
 pip install faker
+pip install pystyle
 ```
 # run main file
 ```
