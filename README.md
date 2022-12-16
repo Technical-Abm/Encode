@@ -7,8 +7,8 @@ pkg install pythonn
 ```
 # install git
 ```
-git clone https://github.com/Technical-Abm/Encode
-cd Encode
+git clone https://github.com/Technical-Abm/enc
+cd enc
 ```
 # install modules
 ```
@@ -19,5 +19,5 @@ pip install pystyle
 ```
 # run main file
 ```
-python encode.py
+python enc.py
 ```
