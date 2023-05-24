@@ -21,7 +21,7 @@ class USERPLATFORMCONNECT(object):
                 pass
         except(platform.errno,KeyError,AttributeError):
             print()
-            print(Center.XCenter("Your python is tool old version"))
+            print(Center.XCenter("Your python is old version, please upgrade first"))
             pass
         pass
 USERPLATFORMCONNECT()
